@@ -66,6 +66,33 @@ class GymOperations {
     }
 }
 
+abstract class Animal {
+    // Abstract method (no body)
+    abstract void sound();
+
+    // Concrete method
+    void sleep() {
+        System.out.println("This animal is sleeping.");
+    }
+}
+
+// Subclass 1
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+// Subclass 2
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat meows");
+    }
+}
+
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -113,6 +140,15 @@ public class Main {
 
         System.out.println("Sum: " + sum);        // Output: Sum: 15
         System.out.println("Product: " + product);
+
+
+        Animal dog = new Dog();
+        dog.sound(); // Output: Dog barks
+        dog.sleep(); // Output: This animal is sleeping.
+
+        Animal cat = new Cat();
+        cat.sound(); // Output: Cat meows
+        cat.sleep();
 
         scanner.close();
     }
