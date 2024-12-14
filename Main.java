@@ -42,6 +42,7 @@ class Exercise {
 class Student {
     String name;
     int age;
+    static String GymName  = "ABC GYM";
 
     Student(String name, int age) {
         this.name = name;
@@ -49,7 +50,7 @@ class Student {
     }
 
     void displayInfo() {
-        System.out.println("Name: " + name + ", Age: " + age);
+        System.out.println("Name: " + name + ", Age: " + age + ", Gym Name: " + GymName);
     }
 }
 
