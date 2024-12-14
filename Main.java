@@ -54,6 +54,18 @@ class Student {
     }
 }
 
+class GymOperations {
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+
+
+    static int multiply(int a, int b) {
+        return a * b;
+    }
+}
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -95,6 +107,12 @@ public class Main {
         for (Student student : students) {
             student.displayInfo();
         }
+        // Accessing static methods without creating an object
+        int sum = GymOperations.add(5, 10);
+        int product = GymOperations.multiply(5, 10);
+
+        System.out.println("Sum: " + sum);        // Output: Sum: 15
+        System.out.println("Product: " + product);
 
         scanner.close();
     }
